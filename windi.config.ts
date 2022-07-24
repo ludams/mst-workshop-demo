@@ -12,7 +12,6 @@ export default defineConfig({
   plugins: [FormsPlugin],
   theme: {
     colors: {
-
     }
   }
 })
