@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { TimeTrackingIdList } from "./components/TimeTrackingIdList";
+import { TrackingTimer } from "./components/TrackingTimer";
+import { TrackHistory } from "./components/TrackHistory";
 
-type TimeTrackingId = {
+export type TimeTrackingId = {
   id: number;
   name: string;
 };
@@ -16,10 +18,12 @@ export function App() {
   ])
 
   return (
-    <div>
-      <TimeTrackingIdList/>
-      <CurrentTrackingId/>
-      <History/>
+    <div className={"flex items-center justify-center h-screen"}>
+      <div className={"flex items-center justify-center bg-green"}>
+        <TimeTrackingIdList timeTrackingIds={timeTrackingIds}/>
+        <TrackingTimer/>
+        <TrackHistory/>
+      </div>
     </div>
   )
 }
