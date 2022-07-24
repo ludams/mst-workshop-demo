@@ -5,6 +5,8 @@ import 'virtual:windi.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <div className={"flex items-center justify-center h-screen"}>
+      <App />
+    </div>
   </React.StrictMode>
 )

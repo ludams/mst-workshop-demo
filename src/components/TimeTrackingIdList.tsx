@@ -7,10 +7,11 @@ type Props = {
 
 export const TimeTrackingIdList: React.FC<Props> = (props) => {
     return (
-      <div>
-        <ul>
+      <div className={"container mr-4"}>
+        <h2 className={"heading"}>🏷 Time Tracking IDs</h2>
+        <ul className={"overflow-auto"}>
           {props.timeTrackingIds.map(timeTrackingId => (
-            <li><button>{timeTrackingId.name}</button></li>
+            <li className={"ml-2 pb-1"}><button>{timeTrackingId.name}</button></li>
           ))}
         </ul>
       </div>

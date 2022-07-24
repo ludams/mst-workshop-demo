@@ -18,11 +18,14 @@ export function App() {
   ])
 
   return (
-    <div className={"flex items-center justify-center h-screen"}>
-      <div className={"flex items-center justify-center bg-green"}>
+    <div className={"app"}>
+      <h1 className={"title mb-4"}>⏳ The Very Original Time Tracking Demo</h1>
+      <div className={"app-children"}>
         <TimeTrackingIdList timeTrackingIds={timeTrackingIds}/>
-        <TrackingTimer/>
-        <TrackHistory/>
+        <div className={"flex flex-col h-full"}>
+          <TrackingTimer/>
+          <TrackHistory/>
+        </div>
       </div>
     </div>
   )
