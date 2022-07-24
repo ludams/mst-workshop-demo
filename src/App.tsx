@@ -1,27 +1,25 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
 import { TimeTrackingIdList } from "./components/TimeTrackingIdList";
 import { TrackingTimer } from "./components/TrackingTimer";
 import { TrackHistory } from "./components/TrackHistory";
+import { store } from "./state/TimeTrackingStore";
+import { observer } from "mobx-react-lite";
 
-export type TimeTrackingId = {
-  id: number;
+export type TimeTrackingIdType = {
+  id: string;
   name: string;
 };
 
-export function App() {
-  const [timeTrackingIds] = useState([
-    { id: 0, name: "Debug"},
-    { id: 1, name: "Write Documentation"},
-    { id: 2, name: "Implement Feature"},
-    { id: 3, name: "Attend Meeting"},
-    { id: 4, name: "Prepare Workshop"},
-  ])
+export const App = observer(() => {
+  useEffect(() => {
+    store.fetchTrackingIds()
+  }, [])
 
   return (
     <div className={"app bg-orange-50"}>
       <h1 className={"title mb-4"}>⏳ The Time Tracking Demo</h1>
       <div className={"app-children"}>
-        <TimeTrackingIdList timeTrackingIds={timeTrackingIds}/>
+        <TimeTrackingIdList timeTrackingIds={store.timeTrackingIds}/>
         <div className={"flex flex-col h-full"}>
           <TrackingTimer/>
           <TrackHistory/>
@@ -29,4 +27,4 @@ export function App() {
       </div>
     </div>
   )
-}
+});

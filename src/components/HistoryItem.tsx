@@ -1,17 +1,17 @@
 import React from "react";
+import { TrackHistoryItemInstance } from "../state/TrackHistoryItem";
+import { observer } from "mobx-react-lite";
 
 type Props = {
-  name: string;
-  timeSpanText: string;
-  durationText: string;
+  historyItem: TrackHistoryItemInstance
 }
 
-export const HistoryItem: React.FC<Props> = (props) => {
-    return (
-      <li className={'mb-2 px-2 py-1 rounded-xl bg-yellow-100'}>
-        <p>{props.name}</p>
-        <span className={"pl-4"}>{props.timeSpanText}</span>
-        <span className={'ml-4'}>{props.durationText}</span>
-      </li>
-    );
-};
+export const HistoryItem: React.FC<Props> = observer(({ historyItem }) => {
+  return (
+    <li className={'mb-2 px-2 py-1 rounded-xl bg-yellow-100'}>
+      <p>{historyItem.trackingId.name}</p>
+      <span className={"pl-4"}>{historyItem.timeSpanText}</span>
+      <span className={'ml-4'}>{historyItem.durationInSeconds}s</span>
+    </li>
+  );
+});
