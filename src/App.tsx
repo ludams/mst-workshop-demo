@@ -18,7 +18,7 @@ export function App() {
   ])
 
   return (
-    <div className={"app"}>
+    <div className={"app bg-orange-50"}>
       <h1 className={"title mb-4"}>⏳ The Very Original Time Tracking Demo</h1>
       <div className={"app-children"}>
         <TimeTrackingIdList timeTrackingIds={timeTrackingIds}/>
