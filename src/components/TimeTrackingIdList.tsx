@@ -25,7 +25,7 @@ export const TimeTrackingIdList: React.FC<Props> = observer((props) => {
     );
 });
 
-const AddTrackingId = () => {
+const AddTrackingId = observer(() => {
   const [value, setValue] = useState<string>('');
 
   const onClick = () => {
@@ -42,4 +42,4 @@ const AddTrackingId = () => {
       <button onClick={onClick} className={"add-button"}>Add</button>
     </div>
   )
-}
+})
