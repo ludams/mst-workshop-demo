@@ -17,7 +17,9 @@ export default defineConfig({
     'timer-button': 'flex items-center justify-center rounded-[50%] border-black border-1 w-8 h-8 mr-2 flex-shrink-0',
     'timer-name': 'overflow-hidden truncate',
     'track-history': 'container flex-1 bg-yellow-200',
-    'history-item': 'mb-2 px-2 py-1 rounded-xl bg-yellow-100'
+    'history-item': 'mb-2 px-2 py-1 rounded-xl bg-yellow-100',
+    'input': 'border-1 border-black rounded-lg w-32 pl-2',
+    'add-button': 'border-1 border-black rounded-lg px-2 py-1 ml-2'
   },
   plugins: [FormsPlugin],
   theme: {
