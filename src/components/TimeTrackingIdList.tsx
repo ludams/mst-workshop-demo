@@ -16,7 +16,6 @@ export const TimeTrackingIdList: React.FC<Props> = (props) => {
           </li>
         ))}
       </ul>
-      <AddTrackingId/>
     </div>
   );
 };
