@@ -7,7 +7,7 @@ type Props = {
 
 export const HistoryItem: React.FC<Props> = (props) => {
   return (
-    <li className={'mb-2 px-2 py-1 rounded-xl bg-yellow-100'}>
+    <li className={'history-item'}>
       <p>{props.name}</p>
       <span className={"pl-4"}>{props.timeSpanText}</span>
       <span className={'ml-4'}>{props.durationText}</span>

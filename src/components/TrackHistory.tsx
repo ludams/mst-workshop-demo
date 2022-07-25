@@ -4,7 +4,7 @@ import { HistoryItem } from "./HistoryItem";
 export const TrackHistory: React.FC = () => {
 
   return (
-    <div className={"container flex-1 bg-yellow-200"}>
+    <div className={"track-history"}>
       <h2 className={"heading"}>💾 Track History</h2>
       <ul className={"overflow-auto"}>
         <HistoryItem name={'Write Documentation'} timeSpanText={'10:10-10:11'} durationText={'80s'}/>

@@ -18,11 +18,11 @@ export const App = () => {
   ])
 
   return (
-    <div className={"app bg-orange-50"}>
-      <h1 className={"title mb-4"}>⏳ The Time Tracking Demo</h1>
+    <div className={"app"}>
+      <h1 className={"title"}>⏳ The Time Tracking Demo</h1>
       <div className={"app-children"}>
         <TimeTrackingIdList timeTrackingIds={timeTrackingIds}/>
-        <div className={"flex flex-col h-full"}>
+        <div className={"right-side"}>
           <TrackingTimer/>
           <TrackHistory/>
         </div>
