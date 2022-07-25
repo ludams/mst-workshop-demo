@@ -9,7 +9,7 @@ export type TimeTrackingIdType = {
 };
 
 export const App = () => {
-  const [timeTrackingIds] = useState([
+  const [timeTrackingIds] = useState<TimeTrackingIdType[]>([
     { id: '0', name: "Debug"},
     { id: '1', name: "Write Documentation"},
     { id: '2', name: "Implement Feature"},
