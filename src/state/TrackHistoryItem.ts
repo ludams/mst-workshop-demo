@@ -2,7 +2,7 @@ import { Instance, types } from "mobx-state-tree";
 import { TimeTrackingIdModel } from "./TimeTrackingId";
 
 export const TrackHistoryItemModel = types.model('HistoryItem', {
-  trackingId: types.safeReference(TimeTrackingIdModel),
+  trackingId: types.reference(TimeTrackingIdModel),
   startTime: types.Date,
   endTime: types.maybeNull(types.Date),
 }).views(self => ({
