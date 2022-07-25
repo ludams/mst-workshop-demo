@@ -27,8 +27,11 @@ export const TimeTrackingStoreModel = types
     }
   }))
   .actions(self => ({
-    addTimeTrackingId(timeTrackingId: TimeTrackingIdInput) {
-      self.timeTrackingIds.push(timeTrackingId);
+    addTimeTrackingId(name: string) {
+      self.timeTrackingIds.push({
+        name,
+        id: self.timeTrackingIds.length.toString()
+      });
     },
     startTrackingProgress(timeTrackingId: TimeTrackingIdInstance) {
       if (self.isTimerRunning) {

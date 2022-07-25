@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { TimeTrackingIdType } from "../App";
 import { TimeTrackingId } from "./TimeTrackingId";
 import { observer } from "mobx-react-lite";
@@ -20,6 +20,26 @@ export const TimeTrackingIdList: React.FC<Props> = observer((props) => {
             <TimeTrackingId timeTrackingId={timeTrackingId}/>
           ))}
         </ul>
+        <AddTrackingId/>
       </div>
     );
 });
+
+const AddTrackingId = () => {
+  const [value, setValue] = useState<string>('');
+
+  const onClick = () => {
+    store.addTimeTrackingId(value)
+    setValue('')
+  }
+
+  return (
+    <div className={"add-tracking-d"}>
+      <input
+        className={'input'}
+        value={value}
+        onChange={(event) => setValue(event.target.value)}/>
+      <button onClick={onClick} className={"add-button"}>Add</button>
+    </div>
+  )
+}
