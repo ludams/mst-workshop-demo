@@ -25,7 +25,7 @@ const AddTrackingId = () => {
   const [value, setValue] = useState<string>('');
 
   return (
-    <div className={"flex flex-row mt-4"}>
+    <div className={"add-tracking-d"}>
       <input
         className={'input'}
         value={value}
