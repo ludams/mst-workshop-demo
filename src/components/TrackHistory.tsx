@@ -5,7 +5,7 @@ import { observer } from "mobx-react-lite";
 
 export const TrackHistory: React.FC = observer(() => {
   return (
-    <div className={"container flex-1 bg-yellow-200"}>
+    <div className={"track-history"}>
       <h2 className={"heading"}>💾 Track History</h2>
       <ul className={"overflow-auto"}>
         {store.trackHistoryCompleted.map(historyItem => (

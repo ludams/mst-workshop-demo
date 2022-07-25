@@ -10,7 +10,7 @@ type Props = {
 
 export const TimeTrackingIdList: React.FC<Props> = observer((props) => {
     return (
-      <div className={"container mr-4 bg-blue-200"}>
+      <div className={"time-tracking-id-list"}>
         <h2 className={"heading"}>🏷 Time Tracking IDs</h2>
         <ul className={"overflow-auto"}>
           {store.isPending && store.timeTrackingIds.length == 0 && (

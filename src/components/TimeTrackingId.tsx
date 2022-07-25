@@ -9,7 +9,7 @@ type Props = {
 
 export const TimeTrackingId: React.FC<Props> = observer((props) => {
   return (
-    <li className={"px-2 py-1 mb-1 rounded-xl bg-blue-100"}>
+    <li className={"time-tracking-id"}>
       <button onClick={() => store.startTrackingProgress(props.timeTrackingId)}>{props.timeTrackingId.name}</button>
     </li>
   );
