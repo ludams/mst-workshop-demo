@@ -3,6 +3,7 @@ import { TimeTrackingIdType } from "../App";
 import { TimeTrackingId } from "./TimeTrackingId";
 import { observer } from "mobx-react-lite";
 import { store } from "../state/TimeTrackingStore";
+import { Container } from './Container';
 
 type Props = {
   timeTrackingIds: TimeTrackingIdType[]
@@ -10,8 +11,8 @@ type Props = {
 
 export const TimeTrackingIdList: React.FC<Props> = observer((props) => {
     return (
-      <div className={"time-tracking-id-list"}>
-        <h2 className={"heading"}>🏷 Time Tracking IDs</h2>
+      <Container className={"mr-4 bg-blue-200"}>
+        <h2 className={"text-lg font-medium mb-2"}>🏷 Time Tracking IDs</h2>
         <ul className={"overflow-auto"}>
           {store.isPending && store.timeTrackingIds.length == 0 && (
             <p>Loading...</p>
@@ -21,7 +22,7 @@ export const TimeTrackingIdList: React.FC<Props> = observer((props) => {
           ))}
         </ul>
         <AddTrackingId/>
-      </div>
+      </Container>
     );
 });
 
@@ -34,12 +35,12 @@ const AddTrackingId = observer(() => {
   }
 
   return (
-    <div className={"add-tracking-d"}>
+    <div className={"flex flex-row mt-4"}>
       <input
-        className={'input'}
+        className={'border-1 border-black rounded-lg w-32 pl-2'}
         value={value}
         onChange={(event) => setValue(event.target.value)}/>
-      <button onClick={onClick} className={"add-button"}>Add</button>
+      <button onClick={onClick} className={"border-1 border-black rounded-lg px-2 py-1 ml-2"}>Add</button>
     </div>
   )
 })

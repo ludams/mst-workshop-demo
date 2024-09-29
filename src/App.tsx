@@ -16,11 +16,11 @@ export const App = observer(() => {
   }, [])
 
   return (
-    <div className={"app"}>
-      <h1 className={"title"}>⏳ The Time Tracking Demo</h1>
-      <div className={"app-children"}>
+    <div className={"flex flex-col justify-stretch p-4 rounded-xl border-1 border-black h-[440px] overflow-hidden bg-orange-50"}>
+      <h1 className={"text-xl font-medium mb-4"}>⏳ The Time Tracking Demo</h1>
+      <div className={"flex flex-row justify-center flex-1 overflow-hidden"}>
         <TimeTrackingIdList timeTrackingIds={store.timeTrackingIds}/>
-        <div className={"right-side"}>
+        <div className={"flex flex-col"}>
           <TrackingTimer/>
           <TrackHistory/>
         </div>
