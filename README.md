@@ -10,13 +10,13 @@ This projects aims to be used for learning and demo purposes.
 Install all dependencies by executing
 
 ```sh
-yarn
+pnpm install
 ```
 
 Run the development server by executing
 
 ```sh
-yarn dev
+pnpm run dev
 ```
 
 ## Libraries used
