@@ -22,7 +22,7 @@ pnpm run dev
 ## Libraries used
 
 | Node Package     | Used for                                                           |
-|------------------| ------------------------------------------------------------------ |
+|------------------|--------------------------------------------------------------------|
 | mobx             | state management "engine" required for mobx-state-tree             |
 | mobx-react-lite  | provides observer HOC to use mobx with react                       |
 | mobx-state-tree  | state management solution which is showcased in this project       |
